@@ -1,14 +1,12 @@
 $(function() {
-    initSlider()
+    initSlider(2500,600)
 })
 
-function initSlider() {
+function initSlider(stay,speed) {
     var imgGallery = [],
         slider = $('.slider'),
         count = 1,
-        timeOut,
-        stay = 2000,
-        speed = 600
+        timeOut
     slider
         .find('img').each(function() {
             imgGallery.push($(this).attr('src'))
@@ -59,7 +57,6 @@ function initSlider() {
             $('.slider').find('img:first').attr('src', lastImg)
         }
 
-
         $('.slider')
             .css({
                 left: '0'
@@ -67,8 +64,8 @@ function initSlider() {
             .addClass('first')
             .find('img:last').remove()
         _panel(num)
-        $('.slider').append('<img src="' + imgAry[num] + '">')
-            .addClass('cantClick')
+        $('.slider').addClass('cantClick')
+            .append('<img src="' + imgAry[num] + '">')            
             .animate({
                 left: '-' + width
             }, speed, 'swing', function() {

@@ -2,6 +2,7 @@ body{
 	margin: 0;
 }
 .slider-container{
+	border-radius: 5px;
 	margin: 100px auto 0px auto;
 	overflow: hidden;
 	position: relative;
@@ -9,8 +10,14 @@ body{
 	height: 500px;
 }
 
-.first{
-	
+.word-card{
+	position: absolute;
+	right: 10px;
+	top: 50px;
+	font-size: 50px;
+	font-family: Arial;
+	color: 	#FFD2D2;
+	text-shadow:3px 3px 3px #000
 }
 .slider{
 	left: -100%;
